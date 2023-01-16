@@ -25,14 +25,9 @@ You can install the development version of chemboxR from
 devtools::install_github("UBC-MDS/chemboxR")
 ```
 
-## Example
+## Usage
 
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-library(chemboxR)
-## basic example code
-```
+## Fitting into the R ecosystem
 
 ## Contributing
 

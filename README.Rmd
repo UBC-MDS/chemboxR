@@ -36,14 +36,9 @@ You can install the development version of chemboxR from [GitHub](https://github
 devtools::install_github("UBC-MDS/chemboxR")
 ```
 
-## Example
+## Usage
 
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
-library(chemboxR)
-## basic example code
-```
+## Fitting into the R ecosystem
 
 ## Contributing
 Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a [Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project, you agree to abide by its terms.
