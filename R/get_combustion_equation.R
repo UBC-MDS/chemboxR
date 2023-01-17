@@ -3,7 +3,7 @@
 #' @param molecule A character vector with one element, to describe a chemical
 #' formula
 #'
-#' @return A tibble
+#' @return A tibble with the balanced combustion equation
 #' @export
 #'
 #' @examples
