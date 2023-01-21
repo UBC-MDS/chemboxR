@@ -3,7 +3,7 @@ Title: ChemboxR is an R copy of Chembox, originally written in python
 Version: 0.0.0.9000
 Authors@R: 
     c(person("Wilfred", "Hass", , "wthass@student.ubc.ca", role = c("aut", "cre")),
-    person("Luke", "Yang", , "", role = c("aut")),
+    person("Luke", "Yang", , "lukey.ubc@qq.com", role = c("aut")),
     person("Nate", "Suraporn", , "", role = c("aut")),
     person("Vikram", "Grewal", , "", role = c("aut")))
 Description: `chemboxR` is a package for molecular information calculator based 
