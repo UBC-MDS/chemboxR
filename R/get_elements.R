@@ -1,8 +1,8 @@
-#' Convert a chemical molecule into its constituent elements with its respective counts as a tibble.
+#' Convert a chemical molecule into its constituent elements with its respective counts as a dictionary.
 #'
 #' @param molecule string
 #'
-#' @return tibble
+#' @return dictionary
 #' @export
 #'
 #' @examples
@@ -10,7 +10,7 @@
 #' get_elements('Al2(SO4)3')
 get_elements <- function(molecule) {
   if(!is.string(molecule)) {
-    stop("Cannot calculate hte elements, the input molecule needs to be type of string")
+    stop("Cannot calculate the elements, the input molecule needs to be type of string")
   }
   TRUE
 }
