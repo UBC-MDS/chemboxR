@@ -31,11 +31,11 @@ is_valid <- function(molecule, simple_check = FALSE) {
       if (!is.na(multiple_loc)) {
         ind_start <- multiple_loc + 1
         ind_end <- ind_start
-        while (ind_end < nchar(molecule) && !is.na(as.numeric(substr(molecule, ind_end +1, ind_end +1)))) {
+        while (ind_end < nchar(molecule) && !is.na(suppressWarnings(as.numeric(substr(molecule, ind_end +1, ind_end +1))))) {
           ind_end <- ind_end + 1
         }
         # Get the subscript number
-        num <- as.numeric(substr(molecule, ind_start, ind_end))
+        num <- suppressWarnings(as.numeric(substr(molecule, ind_start, ind_end)))
         # Update the count of the molecules
         components[[conj]] <- components[[conj]] * num
         # Remove the original string containing ()
@@ -58,7 +58,7 @@ is_valid <- function(molecule, simple_check = FALSE) {
       info <- elements[elements$Symbol == c, ]
       group <- as.numeric(info["Group"])
       ox_state <- (info["OxidationStates"])
-      elem_val <- as.numeric(ox_state)
+      elem_val <- suppressWarnings(as.numeric(ox_state))
 
       if (is.na(elem_val) && !simple_check) {
           stop(paste0("Oxidation state of ", c, " could be multiple. The formula could not be easily checked."))
