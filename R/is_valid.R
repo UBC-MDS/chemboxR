@@ -1,7 +1,7 @@
 #' Check whether a given molecule in string format is chemically valid
 #'
 #' @param molecule string
-#' @param molecule logical
+#' @param simple_check logical
 #' @return logical
 #' @export
 #'
@@ -12,7 +12,7 @@
 #> [1] TRUE
 #' is_valid("Al(SO4)3")
 #> [1] FALSE
-is_valid <- function(molecule, simple_deck = FALSE) {
+is_valid <- function(molecule, simple_check = FALSE) {
   library(tidyverse)
   if (!is.character(molecule)) {
     stop("Cannot calculate hte elements, the input molecule needs to be string")
@@ -31,24 +31,21 @@ is_valid <- function(molecule, simple_deck = FALSE) {
       if (!is.na(multiple_loc)) {
         ind_start <- multiple_loc + 1
         ind_end <- ind_start
-        while (ind_end < nchar(molecule) && !is.na(as.numeric(substr(molecule, ind_end, ind_end)))) {
+        while (ind_end < nchar(molecule) && !is.na(as.numeric(substr(molecule, ind_end +1, ind_end +1)))) {
           ind_end <- ind_end + 1
         }
         # Get the subscript number
         num <- as.numeric(substr(molecule, ind_start, ind_end))
-
         # Update the count of the molecules
         components[[conj]] <- components[[conj]] * num
         # Remove the original string containing ()
-
-        molecule <- gsub(paste("\\(\\)", as.character(num), sep = ""), "", molecule, )
+        molecule <- gsub(paste("\\(\\)", as.character(num), sep = ""), "", molecule)
       }
     }
   }
+
   # find if there exist brackets
-
   other_elem <- get_elements(molecule)
-
   for (i in seq(nrow(other_elem))) {
     components[[other_elem$element[i]]] <- other_elem$count[i]
   }
@@ -61,24 +58,19 @@ is_valid <- function(molecule, simple_deck = FALSE) {
       info <- elements[elements$Symbol == c, ]
       group <- as.numeric(info["Group"])
       ox_state <- (info["OxidationStates"])
-      tryCatch(
-        {
-          elem_val <- as.numeric(ox_state)
-        },
-        error = function(e) {
+      elem_val <- as.numeric(ox_state)
+
+      if (is.na(elem_val) && !simple_check) {
           stop(paste0("Oxidation state of ", c, " could be multiple. The formula could not be easily checked."))
-        }
-      )
+          }
       valance <- valance + elem_val * components[[c]]
     } else {
       stop(paste0("An unknown element ", c, " entered. Please check your input."))
     }
   }
-  if (simple_deck){
+  if (simple_check) {
     TRUE
   } else {
     valance == 0
   }
 }
-
-

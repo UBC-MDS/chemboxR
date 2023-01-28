@@ -4,10 +4,12 @@
 \alias{is_valid}
 \title{Check whether a given molecule in string format is chemically valid}
 \usage{
-is_valid(molecule, simple_deck = FALSE)
+is_valid(molecule, simple_check = FALSE)
 }
 \arguments{
-\item{molecule}{logical}
+\item{molecule}{string}
+
+\item{simple_check}{logical}
 }
 \value{
 logical
