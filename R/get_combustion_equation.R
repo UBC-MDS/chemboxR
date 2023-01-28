@@ -10,7 +10,7 @@
 #' x <- "CH4"
 #' get_combustion_equation(x)
 get_combustion_equation <- function(molecule) {
-
+  library(stringr)
   # check correct type of molecule
   if (!is.character(molecule)){
     stop("Molecule has to be entered as a string")

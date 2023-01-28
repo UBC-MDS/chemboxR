@@ -10,7 +10,7 @@
 #' get_molec_props('CH4')
 #'
 get_molec_props <- function(molecule) {
-
+  library(tidyverse)
   molecule_df <- get_elements(molecule)
 
   elements <- read.csv("https://raw.githubusercontent.com/UBC-MDS/chembox/main/data/elements.csv") |>
