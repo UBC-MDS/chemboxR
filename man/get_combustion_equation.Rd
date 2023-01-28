@@ -11,7 +11,7 @@ get_combustion_equation(molecule)
 formula}
 }
 \value{
-A tibble
+A tibble with the balanced combustion equation
 }
 \description{
 get_combustion_equation
