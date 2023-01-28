@@ -80,4 +80,5 @@ is_valid <- function(molecule, simple_deck = FALSE) {
     valance == 0
   }
 }
-print(is_valid("Na2CO3"))
+
+
