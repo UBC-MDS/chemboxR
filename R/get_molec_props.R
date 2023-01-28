@@ -8,12 +8,8 @@
 #'
 #' @examples
 #' get_molec_props('CH4')
+#'
 get_molec_props <- function(molecule) {
-<<<<<<< HEAD
-  TRUE
-}
-=======
-  library(tidyverse)
 
   molecule_df <- get_elements(molecule)
 
@@ -36,4 +32,3 @@ get_molec_props <- function(molecule) {
 
   elements
 }
->>>>>>> de410a9b016f1d9335327dc45f0e6ae340717688
