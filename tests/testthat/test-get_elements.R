@@ -1,3 +1,5 @@
+# Test for non valid input
+expect_error(get_elements(1))
 # Test for one substance combination
 expect_equal(get_elements('(C2H4)5'),data.frame(element = c('C','H'), count = c(10,20)))
 # Test for two substance combination

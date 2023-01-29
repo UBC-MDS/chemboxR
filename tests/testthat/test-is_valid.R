@@ -14,3 +14,5 @@ expect_equal(is_valid('NaOH',TRUE),TRUE)
 expect_error(is_valid('NxOH'))
 # Test for organic molecules
 expect_error(is_valid('CH4'))
+# Test for not valid data format
+expect_error(is_valid(4))
