@@ -4,6 +4,7 @@
 #' @param simple_check logical
 #' @return logical
 #' @import stringr
+#' @importFrom utils read.csv
 #' @export
 #'
 #' @examples

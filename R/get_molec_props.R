@@ -5,6 +5,7 @@
 #' @return A dataframe with various atomic properties of the elements in the
 #' molecule
 #' @import dplyr
+#' @importFrom utils read.csv
 #' @export
 #'
 #' @examples
