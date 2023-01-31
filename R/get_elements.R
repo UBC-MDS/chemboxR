@@ -4,12 +4,12 @@
 #'
 #' @return dictionary
 #' @export
-#'
+#' @import stringr
+#' @import dplyr
 #' @examples
 #' get_elements("(C2H4)5")
 #' get_elements("Al2(SO4)3")
 get_elements <- function(molecule) {
-  library(tidyverse)
   if (!typeof(molecule) == "character") {
     stop("Incorrect input type, the input molecule needs to be a type of string")
   }
