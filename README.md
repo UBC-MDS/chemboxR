@@ -2,6 +2,8 @@
 # chemboxR
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/UBC-MDS/chemboxR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/UBC-MDS/chemboxR/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/UBC-MDS/chemboxR/branch/main/graph/badge.svg)](https://app.codecov.io/gh/UBC-MDS/chemboxR?branch=main)
 <!-- badges: end -->
 
 ## Introduction
