@@ -3,6 +3,8 @@
 #' @param molecule string
 #' @param simple_check logical
 #' @return logical
+#' @import stringr
+#' @importFrom utils read.csv
 #' @export
 #'
 #' @examples
@@ -13,7 +15,6 @@
 #' is_valid("Al(SO4)3")
 #> [1] FALSE
 is_valid <- function(molecule, simple_check = FALSE) {
-  library(tidyverse)
   if (!is.character(molecule)) {
     stop("Cannot calculate hte elements, the input molecule needs to be string")
   }

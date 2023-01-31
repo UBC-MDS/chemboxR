@@ -18,4 +18,5 @@ get_molec_props
 }
 \examples{
 get_molec_props('CH4')
+
 }

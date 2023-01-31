@@ -4,13 +4,14 @@
 #'
 #' @return A dataframe with various atomic properties of the elements in the
 #' molecule
+#' @import dplyr
+#' @importFrom utils read.csv
 #' @export
 #'
 #' @examples
 #' get_molec_props('CH4')
 #'
 get_molec_props <- function(molecule) {
-  library(tidyverse)
   molecule_df <- get_elements(molecule)
 
   elements <- read.csv("https://raw.githubusercontent.com/UBC-MDS/chembox/main/data/elements.csv") |>
