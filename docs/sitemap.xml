@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ubc-mds.github.io/chemboxR/404.html</loc>
+    <loc>/404.html</loc>
   </url>
   <url>
-    <loc>https://ubc-mds.github.io/chemboxR/articles/chemboxR.html</loc>
+    <loc>/articles/chemboxR.html</loc>
   </url>
   <url>
-    <loc>https://ubc-mds.github.io/chemboxR/articles/index.html</loc>
+    <loc>/articles/index.html</loc>
   </url>
   <url>
-    <loc>https://ubc-mds.github.io/chemboxR/authors.html</loc>
+    <loc>/authors.html</loc>
   </url>
   <url>
-    <loc>https://ubc-mds.github.io/chemboxR/CODE_OF_CONDUCT.html</loc>
+    <loc>/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://ubc-mds.github.io/chemboxR/CONTRIBUTING.html</loc>
+    <loc>/CONTRIBUTING.html</loc>
   </url>
   <url>
-    <loc>https://ubc-mds.github.io/chemboxR/index.html</loc>
+    <loc>/index.html</loc>
   </url>
   <url>
-    <loc>https://ubc-mds.github.io/chemboxR/LICENSE-text.html</loc>
+    <loc>/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>https://ubc-mds.github.io/chemboxR/LICENSE.html</loc>
+    <loc>/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://ubc-mds.github.io/chemboxR/reference/get_combustion_equation.html</loc>
+    <loc>/reference/get_combustion_equation.html</loc>
   </url>
   <url>
-    <loc>https://ubc-mds.github.io/chemboxR/reference/get_elements.html</loc>
+    <loc>/reference/get_elements.html</loc>
   </url>
   <url>
-    <loc>https://ubc-mds.github.io/chemboxR/reference/get_molec_props.html</loc>
+    <loc>/reference/get_molec_props.html</loc>
   </url>
   <url>
-    <loc>https://ubc-mds.github.io/chemboxR/reference/index.html</loc>
+    <loc>/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://ubc-mds.github.io/chemboxR/reference/is_valid.html</loc>
+    <loc>/reference/is_valid.html</loc>
   </url>
 </urlset>
