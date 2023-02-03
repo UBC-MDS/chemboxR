@@ -14,6 +14,81 @@ knitr::opts_chunk$set(
 )
 ```
 
+## Use the following line to include the chemboxR package in your development:
+
 ```{r setup}
 library(chemboxR)
+```
+
+## Using `get_elements()` 
+
+The `get_elements` function will strip a molecule into its base elements along with the count of each element within the molecule and create a dataframe. In order to do this, call the function and pass the molecule as a string such as:
+
+```{r}
+get_elements("C2H4")
+```
+
+You can also call multiples of one element such as:
+
+```{r}
+get_elements("(C2H4)5")
+```
+
+```{r}
+get_elements('Al2(SO4)3')
+```
+
+```{r}
+get_elements('LiH2')
+```
+
+## Using `is_valid()`
+
+This function will check if the molecule is chemically viable and will output a Boolean response of `True` or `False`. To use this function, call it and pass a molecule as a string:
+
+```{r}
+# Calcium carbonate (a common salt)
+is_valid('Al2(SO4)3')
+```
+
+```{r}
+# Sodium hydroxide (a common base)
+is_valid('NaOH')
+```
+
+```{r}
+# Carbonic acid (a common acid)
+is_valid('H2CO3')
+```
+
+## Using `get_molec_props()` 
+
+This function will output a dataframe of properties of each element that a molecule contains. To use this function call it and pass a molecule as a string:
+
+```{r}
+get_molec_props('NaOH')
+```
+
+```{r}
+get_molec_props('CaCl3')
+```
+
+```{r}
+get_molec_props('Al2(SO4)3(C2H4)5')
+```
+
+## Using `get_combustion_equation()`
+
+This function will output the molecules that result from the combustion of a specified molecule in a dataframe. To use this function, call it and pass the molecule as a string:
+
+```{r}
+get_combustion_equation('C2H4')
+```
+
+```{r}
+get_combustion_equation('C4H6')
+```
+
+```{r}
+get_combustion_equation('C5H12')
 ```
